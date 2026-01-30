@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobHub - Find Your Dream Job</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-briefcase"></i> JobHub</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#jobs">Jobs</a></li>
+                    <li><a href="#companies">Companies</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-outline">Login</button>
+                <button class="btn btn-primary">Sign Up</button>
+            </div>
+        </div>
+    </header>
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find Your Dream Job Today</h1>
+                <p>Connect with top employers and discover opportunities that match your skills and aspirations.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>10,000+</h3>
+                        <p>Active Jobs</p>
+                    </div>
+                    <div class="stat">
+                        <h3>5,000+</h3>
+                        <p>Companies</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100,000+</h3>
+                        <p>Job Seekers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="featured-jobs" id="jobs">
+        <div class="container">
+            <h2 class="section-title">Featured Jobs</h2>
+            <div class="jobs-grid">
+                <div class="job-card">
+                    <div class="job-header">
+                        <div class="job-info">
+                            <h3>Senior Frontend Developer</h3>
+                            <p class="company-name">Google Inc.</p>
+                            <p class="job-location"><i class="fas fa-map-marker-alt"></i> San Francisco, CA</p>
+                        </div>
+                        <div class="job-type">Full-time</div>
+                    </div>
+                    <div class="job-description">
+                        <p>We're looking for a skilled Frontend Developer to join our team and help build amazing user experiences.</p>
+                    </div>
+                    <div class="job-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Node.js</span>
+                    </div>
+                    <div class="job-footer">
+                        <div class="salary">$120,000 - $150,000</div>
+                        <button class="btn btn-primary">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <div class="job-info">
+                            <h3>Product Manager</h3>
+                            <p class="company-name">Microsoft</p>
+                            <p class="job-location"><i class="fas fa-map-marker-alt"></i> Seattle, WA</p>
+                        </div>
+                        <div class="job-type">Full-time</div>
+                    </div>
+                    <div class="job-description">
+                        <p>Lead product strategy and development for our cloud-based solutions. Drive innovation and user experience.</p>
+                    </div>
+                    <div class="job-tags">
+                        <span class="tag">Strategy</span>
+                        <span class="tag">Analytics</span>
+                        <span class="tag">Leadership</span>
+                        <span class="tag">Agile</span>
+                    </div>
+                    <div class="job-footer">
+                        <div class="salary">$140,000 - $180,000</div>
+                        <button class="btn btn-primary">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <div class="job-info">
+                            <h3>UX/UI Designer</h3>
+                            <p class="company-name">Apple Inc.</p>
+                            <p class="job-location"><i class="fas fa-map-marker-alt"></i> Cupertino, CA</p>
+                        </div>
+                        <div class="job-type">Full-time</div>
+                    </div>
+                    <div class="job-description">
+                        <p>Create intuitive and beautiful user interfaces for our next-generation products and services.</p>
+                    </div>
+                    <div class="job-tags">
+                        <span class="tag">Figma</span>
+                        <span class="tag">Sketch</span>
+                        <span class="tag">Prototyping</span>
+                        <span class="tag">User Research</span>
+                    </div>
+                    <div class="job-footer">
+                        <div class="salary">$110,000 - $140,000</div>
+                        <button class="btn btn-primary">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <div class="job-info">
+                            <h3>Data Scientist</h3>
+                            <p class="company-name">Amazon</p>
+                            <p class="job-location"><i class="fas fa-map-marker-alt"></i> Remote</p>
+                        </div>
+                        <div class="job-type">Remote</div>
+                    </div>
+                    <div class="job-description">
+                        <p>Analyze large datasets to drive business insights and improve our recommendation algorithms.</p>
+                    </div>
+                    <div class="job-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">AWS</span>
+                    </div>
+                    <div class="job-footer">
+                        <div class="salary">$130,000 - $160,000</div>
+                        <button class="btn btn-primary">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <div class="job-info">
+                            <h3>DevOps Engineer</h3>
+                            <p class="company-name">Netflix</p>
+                            <p class="job-location"><i class="fas fa-map-marker-alt"></i> Los Angeles, CA</p>
+                        </div>
+                        <div class="job-type">Full-time</div>
+                    </div>
+                    <div class="job-description">
+                        <p>Build and maintain our cloud infrastructure to support millions of streaming users worldwide.</p>
+                    </div>
+                    <div class="job-tags">
+                        <span class="tag">Docker</span>
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">AWS</span>
+                        <span class="tag">CI/CD</span>
+                    </div>
+                    <div class="job-footer">
+                        <div class="salary">$125,000 - $155,000</div>
+                        <button class="btn btn-primary">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <div class="job-info">
+                            <h3>Backend Developer</h3>
+                            <p class="company-name">Spotify</p>
+                            <p class="job-location"><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+                        </div>
+                        <div class="job-type">Full-time</div>
+                    </div>
+                    <div class="job-description">
+                        <p>Develop scalable backend services for our music streaming platform used by millions daily.</p>
+                    </div>
+                    <div class="job-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">Spring Boot</span>
+                        <span class="tag">Microservices</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                    <div class="job-footer">
+                        <div class="salary">$115,000 - $145,000</div>
+                        <button class="btn btn-primary">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-briefcase"></i> JobHub</h3>
+                    <p>Your gateway to amazing career opportunities. Connect with top employers and find your dream job today.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>For Job Seekers</h4>
+                    <ul>
+                        <li><a href="#">Browse Jobs</a></li>
+                        <li><a href="#">Career Advice</a></li>
+                        <li><a href="#">Resume Builder</a></li>
+                        <li><a href="#">Salary Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>For Employers</h4>
+                    <ul>
+                        <li><a href="#">Post a Job</a></li>
+                        <li><a href="#">Browse Resumes</a></li>
+                        <li><a href="#">Recruiting Solutions</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 JobHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
