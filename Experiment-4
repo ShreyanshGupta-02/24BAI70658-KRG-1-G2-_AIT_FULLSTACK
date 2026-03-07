@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Job Board</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#cfe7f5;
+}
+
+header{
+background:#3a8dde;
+color:white;
+text-align:center;
+padding:25px;
+border-bottom-left-radius:25px;
+border-bottom-right-radius:25px;
+}
+
+.form-container{
+background:white;
+width:90%;
+max-width:520px;
+margin:30px auto;
+padding:20px;
+border-radius:15px;
+box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+input, textarea{
+width:100%;
+padding:10px;
+margin:8px 0;
+border-radius:8px;
+border:1px solid #bbb;
+}
+
+button{
+width:100%;
+padding:10px;
+border:none;
+border-radius:8px;
+background:#3a8dde;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#2d6fb4;
+}
+
+.jobs{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+padding:20px;
+}
+
+.job{
+background:white;
+padding:15px;
+border-radius:12px;
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
+}
+
+.job h3{
+margin:0;
+color:#3a8dde;
+}
+
+.job p{
+margin:5px 0;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Job Board</h1>
+<p>Post new jobs and view them instantly</p>
+</header>
+
+<div class="form-container">
+
+<form id="postForm">
+
+<input type="text" id="jobTitle" placeholder="Enter Job Title" required>
+
+<input type="text" id="companyName" placeholder="Enter Company Name" required>
+
+<input type="text" id="jobLocation" placeholder="Enter Location" required>
+
+<textarea id="jobDesc" placeholder="Enter Job Description" required></textarea>
+
+<button type="submit">Add Job</button>
+
+</form>
+
+</div>
+
+<div class="jobs" id="jobList">
+
+<div class="job">
+<h3>Frontend Developer</h3>
+<p><b>Company:</b> TechVision</p>
+<p><b>Location:</b> Bangalore</p>
+<p>Work with HTML, CSS and JavaScript to build web apps.</p>
+</div>
+
+<div class="job">
+<h3>Data Engineer</h3>
+<p><b>Company:</b> DataFlow</p>
+<p><b>Location:</b> Hyderabad</p>
+<p>Manage and process large datasets.</p>
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("postForm").addEventListener("submit",function(e){
+
+e.preventDefault()
+
+let title=document.getElementById("jobTitle").value
+let company=document.getElementById("companyName").value
+let location=document.getElementById("jobLocation").value
+let desc=document.getElementById("jobDesc").value
+
+let newJob=document.createElement("div")
+newJob.className="job"
+
+newJob.innerHTML=
+"<h3>"+title+"</h3>"+
+"<p><b>Company:</b> "+company+"</p>"+
+"<p><b>Location:</b> "+location+"</p>"+
+"<p>"+desc+"</p>"
+
+document.getElementById("jobList").appendChild(newJob)
+
+document.getElementById("postForm").reset()
+
+})
+
+</script>
+
+</body>
+</html>
