@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Job Search Portal</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Segoe UI,Arial;
+background:#d0f0e8;
+}
+
+header{
+background:#00a896;
+color:white;
+text-align:center;
+padding:25px;
+border-bottom-left-radius:25px;
+border-bottom-right-radius:25px;
+}
+
+.form-area{
+background:white;
+width:90%;
+max-width:500px;
+margin:30px auto;
+padding:20px;
+border-radius:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+input,select{
+width:100%;
+padding:10px;
+margin:8px 0;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+button{
+width:100%;
+padding:10px;
+background:#00a896;
+color:white;
+border:none;
+border-radius:8px;
+font-size:15px;
+cursor:pointer;
+}
+
+button:hover{
+background:#028f7e;
+}
+
+.profile{
+background:white;
+width:90%;
+max-width:500px;
+margin:20px auto;
+padding:18px;
+border-radius:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+display:none;
+}
+
+.profile h3{
+color:#00a896;
+margin-top:0;
+}
+
+.profile p{
+background:#e7fffb;
+padding:8px;
+border-radius:6px;
+margin:6px 0;
+}
+
+.jobs{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+padding:20px;
+}
+
+.job-card{
+background:white;
+padding:15px;
+border-radius:12px;
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
+}
+
+.job-card h3{
+margin:0;
+color:#00a896;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Job Search Portal</h1>
+<p>Create your job profile instantly</p>
+</header>
+
+<div class="form-area">
+
+<form id="profileForm">
+
+<input type="text" id="name" placeholder="Enter Your Name" required>
+
+<input type="email" id="email" placeholder="Enter Email" required>
+
+<input type="text" id="role" placeholder="Preferred Job Role" required>
+
+<input type="number" id="experience" placeholder="Years of Experience" required>
+
+<input type="text" id="location" placeholder="Preferred Location" required>
+
+<select id="type">
+<option>Full Time</option>
+<option>Part Time</option>
+<option>Internship</option>
+</select>
+
+<button type="submit">Create Profile</button>
+
+</form>
+
+</div>
+
+<div class="profile" id="userProfile">
+
+<h3>User Job Profile</h3>
+
+<p><b>Name:</b> <span id="pname"></span></p>
+<p><b>Email:</b> <span id="pemail"></span></p>
+<p><b>Role:</b> <span id="prole"></span></p>
+<p><b>Experience:</b> <span id="pexp"></span></p>
+<p><b>Location:</b> <span id="plocation"></span></p>
+<p><b>Job Type:</b> <span id="ptype"></span></p>
+
+</div>
+
+<h2 style="text-align:center;">Available Jobs</h2>
+
+<div class="jobs">
+
+<div class="job-card">
+<h3>Web Developer</h3>
+<p>Company: CodeTech</p>
+<p>Location: Delhi</p>
+</div>
+
+<div class="job-card">
+<h3>Data Analyst</h3>
+<p>Company: DataWorld</p>
+<p>Location: Bangalore</p>
+</div>
+
+<div class="job-card">
+<h3>UI Designer</h3>
+<p>Company: PixelStudio</p>
+<p>Location: Mumbai</p>
+</div>
+
+</div>
+
+<script>
+
+profileForm.onsubmit=function(e){
+
+e.preventDefault()
+
+userProfile.style.display="block"
+
+pname.innerText=name.value
+pemail.innerText=email.value
+prole.innerText=role.value
+pexp.innerText=experience.value+" years"
+plocation.innerText=location.value
+ptype.innerText=type.value
+
+alert("Profile Created Successfully")
+
+}
+
+</script>
+
+</body>
+</html>
