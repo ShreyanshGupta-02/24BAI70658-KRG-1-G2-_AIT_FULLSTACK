@@ -1,0 +1,53 @@
+<!-- create a form with title and body fields, on submit send a POST request to the same API endpoint and display a success message once data is submitted -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Post</title>
+</head>
+<body>
+
+<h2>Create a Post</h2>
+
+<form id="postForm">
+    <label>Title:</label><br>
+    <input type="text" id="title" required><br><br>
+
+    <label>Body:</label><br>
+    <textarea id="body" rows="4" cols="30" required></textarea><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<p id="message"></p>
+
+<script>
+document.getElementById("postForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const title = document.getElementById("title").value;
+    const body = document.getElementById("body").value;
+
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            title: title,
+            body: body
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("message").innerText = "Post submitted successfully!";
+        document.getElementById("postForm").reset();
+        console.log(data);
+    })
+    .catch(error => {
+        document.getElementById("message").innerText = "Error submitting post.";
+    });
+});
+</script>
+
+</body>
+</html>
