@@ -1,0 +1,33 @@
+<!-- Add and Remove List Items Dynamically Create an HTML page containing: A text input field An Add Item button A Remove Last Item button An unordered list (<ul>) Task: When the Add Item button is clicked Take the value from the input field. Create a new <li> element. Add it to the list. When the Remove Last Item button is clicked: Remove the last <li> element from the list -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="itemInput" placeholder="Enter item">
+<button onclick="addItem()">Add Item</button>
+<button onclick="removeItem()">Remove Last Item</button>
+<ul id="itemList"></ul>
+<script>
+function addItem() {
+    let input = document.getElementById("itemInput").value;
+    if(input !== "") {
+        let li = document.createElement("li"); 
+        li.textContent = input;                  
+        document.getElementById("itemList").appendChild(li); 
+        document.getElementById("itemInput").value = "";    
+    }
+}
+function removeItem() {
+    let list = document.getElementById("itemList");
+    if(list.lastElementChild) {
+        list.removeChild(list.lastElementChild);
+    }
+}
+
+</script>
+</body>
+</html>
